@@ -59,9 +59,16 @@ int main(){
         Link1b=0;
     }
 
+    std::ofstream os;
+    os.open("array.data");
+    for(int i=0;i<nmax2;++i) {
+        for (int j = 0; j < nmax2; ++j) {
+            os << spin[i][j] << "\t";
+        }
+        os <<std::endl;
+    }
     return 0;
 }
-
 double f_rand(void)
 {
     double a;
